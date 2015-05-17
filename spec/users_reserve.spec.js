@@ -64,9 +64,10 @@ describe("Without token", function() {
 });
 
 describe("With company user", function() {
-  var host, token;
+  var host = spec.host(config.host);
+  var token;
   before(function(done) {
-    host = spec.host(config.host).api(API).login({
+    host.api(API).login({
       "email": "givery@test.com",
       "password": "password"
     }).success(function(data, res) {
@@ -88,9 +89,10 @@ describe("With company user", function() {
 });
 
 describe("With student user", function() {
-  var host, token, userId;
+  var host = spec.host(config.host);
+  var token, userId;
   before(function(done) {
-    host = spec.host(config.host).api(API).login({
+    host.api(API).login({
       "email": "user1@test.com",
       "password": "password"
     }).success(function(data, res) {

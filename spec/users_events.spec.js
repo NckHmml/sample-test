@@ -59,6 +59,9 @@ var API = spec.define({
         "required": true,
         "format": "YYYY-MM-DD HH:mm:ss"
       },
+      "events.company": {
+        "required": true
+      },
       "events.company.id": {
         "required": true
       },
